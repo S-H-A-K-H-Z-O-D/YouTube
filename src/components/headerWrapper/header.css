@@ -1,0 +1,29 @@
+.icon {
+  position: relative;
+  margin-left: 50px;
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: url(./img/YouTube_icon.png) no-repeat;
+  background-size: 100% 100%;
+  left: -83%;
+  top: -11px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.search_input {
+  margin-left: 300px;
+}
+
+.search_input input {
+  padding: 7px 15px;
+  border-radius: 50px;
+}
