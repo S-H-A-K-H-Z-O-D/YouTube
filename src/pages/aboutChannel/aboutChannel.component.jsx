@@ -2,9 +2,10 @@ import { useContext } from "react";
 import { AboutChannelContext } from "../../contexts/aboutChannel";
 
 export const AboutChannel = () => {
-  const { datas } = useContext(AboutChannelContext);
+  // const { datas } = useContext(AboutChannelContext);
 
-  console.log(datas);
+  // console.log(datas);
 
-  return <h1>{datas[0]?.name?.common}</h1>;
+  // return <h1>{datas[0]?.name?.common}</h1>;
+  return <>About channel</>;
 };

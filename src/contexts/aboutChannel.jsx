@@ -8,7 +8,16 @@ export const AboutChannelProvider = ({ children }) => {
   let [datas, setDatas] = useState([]);
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
+    fetch(
+      "https://youtube-search-and-download.p.rapidapi.com/trending?type=mu&hl=en&gl=US",
+      {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
+          "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setDatas(data));
   }, []);
