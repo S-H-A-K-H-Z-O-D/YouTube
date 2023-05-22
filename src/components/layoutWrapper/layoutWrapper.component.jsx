@@ -23,6 +23,7 @@ export const LayoutWrapper = ({ children }) => {
               padding: 24,
               minHeight: 280,
               background: colorBgContainer,
+              overflow: "auto",
             }}
           >
             {children}

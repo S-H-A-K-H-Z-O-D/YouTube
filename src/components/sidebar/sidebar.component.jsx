@@ -7,11 +7,10 @@ import {
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
-import { HeaderWrapper } from "../headerWrapper/headerWrapper.component";
 import "./sidebar.css";
 const { Sider } = Layout;
 
-export const Sidebar = ({ collapsed, setCollapsed }) => {
+export const Sidebar = ({ collapsed }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 

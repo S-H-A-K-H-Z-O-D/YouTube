@@ -8,7 +8,7 @@ const { Title } = Typography;
 
 export const Login = hoc(
   useLoginProps,
-  ({ onLogin, emailRef, passwordRef }) => {
+  ({ onLogin, emailRef, passwordRef, wrong }) => {
     return (
       <Row className="login_body" align={"middle"} justify={"center"}>
         <Row className="login_wrapper" align={"middle"} justify={"center"}>
@@ -43,6 +43,10 @@ export const Login = hoc(
                 type="password"
               />
             </Form.Item>
+
+            {wrong ? (
+              <p className="wrongInput">Check your email or password</p>
+            ) : null}
 
             <Row className="form_btn" justify={"center"}>
               <Button htmlType="submit">Login</Button>
