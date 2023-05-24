@@ -20,9 +20,14 @@ export const Sidebar = ({ collapsed }) => {
 
   return (
     <>
-      <Sider className="aside" trigger={null} collapsible collapsed={collapsed}>
+      <Sider
+        style={{ backgroundColor: "white" }}
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+      >
         <Menu
-          theme="dark"
+          theme="light"
           mode="inline"
           onClick={onNavigate}
           selectedKeys={[`/${pathname.split("/")[1]}`]}

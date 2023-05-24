@@ -3,21 +3,23 @@ import { AboutChannelContext } from "../../contexts/aboutChannel";
 import { Card, Col, Row } from "antd";
 import "./aboutChannel.css";
 import { Skaleton } from "./skeleton/skeleton.component";
+import { Link } from "react-router-dom";
 const { Meta } = Card;
 
 export const AboutChannel = () => {
-  const { data } = useContext(AboutChannelContext);
-  console.log(data);
+  const { data, loading, OnNavigate } = useContext(AboutChannelContext);
 
-  return (
+  return loading ? (
+    <Skaleton />
+  ) : (
     <Row justify={"center"} gutter={[20, 20]}>
-      <Skaleton />
       {data.map(({ video }) => (
         <Col key={video.videoId}>
           <Card
+            onClick={OnNavigate.bind(null, video.videoId)}
             hoverable
             style={{
-              width: 240,
+              width: 290,
             }}
             bodyStyle={{
               padding: "16px",
@@ -25,12 +27,15 @@ export const AboutChannel = () => {
             cover={<img alt="example" src={video.thumbnails[0].url} />}
           >
             <Meta title={video.title} />
-            <p>{video.channelName}</p>
-            <p>
-              {video.viewCountText}
-              <span className="published_time">{video.publishedTimeText}</span>
-            </p>
-            <Meta description="www.instagram.com" />
+            <div className="mt-1">
+              <Link className="text-dark">{video.channelName}</Link>
+              <p className="mb-0 ">
+                {video.viewCountText}
+                <span className="published_time">
+                  {video.publishedTimeText}
+                </span>
+              </p>
+            </div>
           </Card>
         </Col>
       ))}

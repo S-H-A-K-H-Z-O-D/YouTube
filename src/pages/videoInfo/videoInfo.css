@@ -1,0 +1,71 @@
+.subscribe_btn {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 7px 15px;
+  font-weight: 600;
+}
+
+.subscribe_btn:hover {
+  background-color: rgba(0, 0, 0, 0.86);
+}
+
+.subscribed_btn {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.06);
+  border: none;
+  border-radius: 50px;
+  padding: 7px 42px;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.subscribed_btn::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: url(../../img/upToDown.png) no-repeat;
+  background-size: 100% 100%;
+  top: 10px;
+  right: 15px;
+}
+
+.subscribed_btn:hover {
+  background-color: rgba(0, 0, 0, 0.17);
+}
+
+.subscribed_btn::after {
+}
+
+.parent_subscribed_btn {
+  position: relative;
+}
+
+.subscribed_btns_wrapper {
+  border-radius: 7px;
+  padding: 0;
+  position: absolute;
+  top: 40px;
+}
+
+.subscribed_btns {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 600;
+  padding: 7px 40px;
+  padding-left: 20px;
+  background-color: white;
+  width: 100%;
+  border: none;
+}
+
+.subscribed_btns:hover {
+  background-color: rgba(0, 0, 0, 0.17);
+}
+
+.defaultHover {
+  background-color: rgba(0, 0, 0, 0.17);
+}

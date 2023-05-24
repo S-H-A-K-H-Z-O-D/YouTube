@@ -1,0 +1,8 @@
+.related_video_title {
+  height: 37px;
+  overflow: hidden;
+}
+
+.related_video_img {
+  border-radius: 7px;
+}
