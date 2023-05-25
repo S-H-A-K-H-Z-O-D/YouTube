@@ -8,9 +8,12 @@ import {
 import { Menu } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./sidebar.css";
+import { useContext } from "react";
+import { AboutChannelContext } from "../../contexts/aboutChannel";
 const { Sider } = Layout;
 
 export const Sidebar = ({ collapsed }) => {
+  const { aside } = useContext(AboutChannelContext);
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
